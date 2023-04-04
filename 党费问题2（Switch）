@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	float p;int money,p1,p2;
+	printf("请输入你的工资(单位\元)");
+    scanf("%f",&p);
+	p1=(p-1)/1000;
+	switch(p1)
+	{
+		case 0:
+		case 1:
+		case 2:p2=0.005*p;break;
+		case 3:
+		case 4:p2=0.01*p;break;
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:p2=0.15*p;break;
+		default:p2=0.2*p;break;
+	 }
+	
+	printf("你应交的党费为%d元\n",p2);
+	return 0;
+}
